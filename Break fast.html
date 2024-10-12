@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>foodie mpt </title>
+    <link rel="stylesheet" href="css/datacss.css" type="text/css" media="all" />
+    <link rel="shortcut icon" href="https://newtalkart.files.wordpress.com/2022/10/20221003_124542.jpg?w=1024" type="image/x-icon" />
+  </head>
+  <body>
+    <section class="datatext" id="datapacktext">
+      <div class="datapacktext">
+         Break Fast 
+      </div>
+    </section>
+    <br />
+    <div class="topic">
+       TIFFEN
+Time: 8:00am to 10:00am 
+    </div>
+
+      <div class="container">
+      <form action="" method="post">
+    <section class="data">
+      <div class="datapack">
+        <label for="4idil/">
+          <h4>Idli</h4>
+     <input type="checkbox" name="4 idli/daily" id="4idil/" class="cbx" />
+        <label for="4idil/">
+          order 
+          </label>
+        <div class="items/shop">
+        <select name="4idil/shop" onchange="calculateAmount1(this.value)" >
+			<option value="" disabled selected>Choose your Quality </option>
+		  <option name="home shop" value="2">2</option>
+		  <option name="home shop" value="3">3</option>
+		  <option name="home shop" value="4">4</option>
+		  <option name="home shop" value="5">5</option>
+		  <option name="home shop" value="6">6</option>
+		  <option name="home shop" value="7">7</option>
+		  <option name="home shop" value="8">8</option>
+		  <option name="home shop" value="10">10</option>
+  
+		</select>
+</div>
+        <input class="tot_output" name="tot_4idil" id="tot_amount1" type="text" readonly placeholder="₹">
+        </label>
+      </div>
+      <br />
+    </section>
+            <section class="total" >
+             <a  onclick="myFunction()">TOTAL AMOUNT</a>
+             <p id="demo">0</p>
+            </section>
+                <section class="order-page" id="order-page">
+      <header class="topic">
+        <h1 class="topic">Booking form</h1>
+      </header>
+
+        <!-- email-->
+        <label>email</label>
+        <div class="field ">
+          <div class="input-field">
+            <input type="email" name="email" id="" value="" placeholder="email"   required=""/>
+    </div>
+    </div>
+        <!-- phone no -->
+        <label>phone number</label>
+        <div class="field ">
+          <div class="input-field">
+         <input type="tel" name="phone no" id="" value="" placeholder="phone number"  required=""/>
+          </div>
+        </div>
+      
+        <label>address</label>
+        <!--  address-->
+        <div class="field ">
+          <div class="input-field">
+       <input type="text" name="address" id="" value="" placeholder="address"required=""/>
+          </div>
+        </div>
+        <!--landmark-->
+        <label>nearby Landmark</label>
+        <div class="field ">
+          <div class="input-field">
+       <input type="text" name="Landmark" id="" value="" placeholder="nearby landmark"required=""/>
+          </div>
+        </div>
+        <!-- payment-->
+        <label>payment</label>
+        <div class="field ">
+          <div class="input-field">
+  <select  name="payment" required="">
+   	<option value="" disabled selected>Choose your option</option>
+    <option name="OLP">online playment</option>
+  </select>
+          </div>
+        </div>
+          <!-- phone last no -->
+        <label>phone last  4digit number</label>
+        <div class="field ">
+          <div class="input-field">
+         <input type="tel" name="phone last no" id="" value="" placeholder="phone last 4digit number"  required=""/>
+          </div>
+        </div>
+        <label>online payment link </label>
+        <div class="field-pay">
+          <div class="input-pay">
+            
+            <a href="upi://pay?pa=shamilshygul@okicici&pn=Shygul Creations&aid=uGICAgICTg-vvUg">online payment </a>
+          </div>
+            <h6> <a href="mailto:foodiempt@gmail.com">Add notes please enter name & payment screenshort send</a>
+        </div>
+        <label>check</label>
+        <div class="field ">
+          <div class="input">
+            <h4>
+            <input type="checkbox" name="check out"  id="checkout"required="" />
+            <label for="checkout">please tick items only order ,All check . </label>
+            </h4>
+          </div>
+
+        </div>
+        <!-- button -->
+        <div class="input-field button">
+          <input type="submit" value="booking now " />
+        </div>
+      </form>
+    </div>
+   </section>
+  </body>
+</html>
+<script type="text/javascript" charset="utf-8">
+   //4idil
+            function calculateAmount1(val) {
+                var tot_price = val * 7;
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount1');
+                divobj.value = tot_price;
+            }
+   //2dosa/2idli
+            function calculateAmount2(val) {
+                var tot_price = val * 1710;
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount2');
+                divobj.value = tot_price;
+            }
+   //2parotta
+            function calculateAmount3(val) {
+                var tot_price = val * 750;
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount3');
+                divobj.value = tot_price;
+            }
+   //4parotta
+            function calculateAmount4(val) {
+                var tot_price = val * 1350;
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount4');
+                divobj.value = tot_price;
+            }
+</script>
+<script type="text/javascript" charset="utf-8">
+function myFunction() {
+  var z = document.getElementById("tot_amount99").value;
+  var a = document.getElementById("tot_amount1").value;
+  var b = document.getElementById("tot_amount2").value;
+  var c = document.getElementById("tot_amount3").value;
+  var d = document.getElementById("tot_amount4").value;
+  var x = +a +  +b + +c + +d + +10 ;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+<style type="text/css" media="all">
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+.data{
+}
+.datapacktext{
+  background-color:  #899977;
+  color: #000;
+  width:100%;
+  height: 50px;
+  font-size:40px;
+  font-family: Serif;
+  text-align: center;
+}
+.datapack{
+  background-color: ;
+  color: #000;
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px 2px #000;
+  font-weight: bold;
+  text-align: center;
+}
+.cancel{
+  text-decoration:line-through;
+  color: #ff9900;
+}
+.items/shop ,.tot_output{
+  font-size: 18px;
+  font-weight:033;
+  border-radius:5px;
+  outline: none;
+  border: none;
+}
+.tot_output{
+  color: #ff8501;
+  position: ;
+  width:35px;
+  outline: none;
+  border: none;
+}
+.total{
+  font-size:25px;
+  font-weight: 500;
+  text-align: center;
+  font-weight: bold;
+  color: #0e4bf1;
+  
+}
+.total a{
+  color: #000;
+}
+container {
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.container header {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  align-items: center;
+}
+.header{
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  
+}
+.container form {
+  margin-top: 30px;
+}
+form .field {
+  margin-bottom: 20px;
+}
+form .input-field {
+  position: relative;
+  height: 55px;
+  width: 100%;
+}
+.input-field input {
+  height: 100%;
+  width: 90%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0 15px;
+  border: 1px solid #d1d1d1;
+}
+.invalid input {
+  border-color: #d93025;
+}
+
+.button {
+}
+.button input {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input:hover {
+  background-color: #0e4bf1;
+}
+input-pay a{
+   color:#200088;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+ }
+ .field-pay {
+   color:#FFF5D1;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+ }
+</style>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title>Foodie Express</title>
+</head>
+<body>
+  <div class="menu">
+    <div class="head">Items Choose </div>
+    <br><select name="items">
+			<option value="" disabled selected>Choose your items </option>
+      <option value="poratta">poratta</option>
+      <option value="poratta">poratta</option>
+      <option value="poratta">poratta</option>
+    </select>
+    <br><br>
+    <input type="tel" name="Qty" placeholder="Quantity">
+   <br>
+        </div>
+  <br>
+  <img src="20230412_211038.jpg" >
+  <br>
+  <div class="container">
+  <div class="head">order now</div><br>
+    <input type="text" name="name" placeholder="Name" required=""/><br><br>
+    <input type="tel" name="Phone number" placeholder="Phone number" required=""/><br><br>
+    <input type="location" name="location" placeholder="Location" required=""/>
+ <br><br>   <input type="text" name="nearby" placeholder="Nearby location" required=""/>
+ </br> <br><select  name="payment" required="">
+   	<option value="" disabled selected>payment</option>
+    <option name="COD">Cash on Delivery </option>
+    <option name="OLP">online playment</option>
+  </select><br><br>
+       <input type="checkbox" name="check" required=""  id="check out ">
+      <label for="check out ">order confirmation; Delivery charges now ₹10 </label>
+      <br><br><br>
+       <input type="submit" value="order now" class="submit">
+  </div> 
+</body>
+</head>
+<style>
+    .head{
+    font-weight: bold;
+    font-size: 20px;
+    }
+  .menu{
+    font-weight: bolder;
+    font-size: 10px;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    padding: 10px 10px ;
+    color: #fff;
+    font-family: Sans-Serif;
+    
+    }
+  .container{
+    font-weight: bolder;
+    font-size: 10px;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    padding: 10px 10px ;
+    color: #fff;
+    font-family: Sans-Serif;
+    
+    }
+    .container input{
+    border-radius: 10px;
+      justify-content: center;
+      padding: 10px 60px;
+      outline: none;
+      border: none;
+    }
+    .menu input{
+    border-radius: 10px;
+      justify-content: center;
+      padding: 10px 60px;
+      outline: none;
+      border: none;
+    }
+    input.hover{
+      color: #fff;
+     background-color: #000;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+</style>
